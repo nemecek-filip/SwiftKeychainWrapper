@@ -27,7 +27,11 @@
 
 import Foundation
 
-class TestObject: NSObject, NSCoding {
+class TestObject: NSObject, NSSecureCoding {
+    static var supportsSecureCoding: Bool {
+        return true
+    }
+    
     var objectName = "Name"
     var objectRating = 0
     
